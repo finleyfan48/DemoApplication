@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+       <meta charset="utf-8"/>
+       <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+       <title></title>
+       <meta name="description" content=""/>
+       <meta name="viewport" content="width=device-width, initial-scale=1"/>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+       <link rel="manifest" href="site.webmanifest"/>
+       <link rel="apple-touch-icon" href="icon.png"/>
+       <!-- Place favicon.ico in the root directory -->
+
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+       <link rel="stylesheet" href="/css/normalize.css"/>
+       <link rel="stylesheet" href="/css/main.css"/>
+   </head>
+   <body>
+   		<header><a href="/"><img class="logo" alt="iHeartMedia" src="/img/iheart-logo.png"/></a><a href="/"><h4>Home</h4></a><img class="full-logo" alt="iHeartMedia" src="/img/iheartfull-logo.jpeg"/></header>
+   		<div class="container index-body">
+			<h1>Result</h1>
+		    <h4 th:text="'Station Id: ' + ${station.stationId}" />
+		    <h4 th:text="'Station Name: ' + ${station.name}" />
+		    <h4 th:text="'Station Call Sign: ' + ${station.callSign}" />
+		    <a href="/addstation" style="text-decoration: underline;font-size:18px;">Add Another station</a>
+	    </div>
+	</body>
+</html>

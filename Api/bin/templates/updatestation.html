@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+   <head>
+       <meta charset="utf-8"/>
+       <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+       <title></title>
+       <meta name="description" content=""/>
+       <meta name="viewport" content="width=device-width, initial-scale=1"/>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+       <link rel="manifest" href="site.webmanifest"/>
+       <link rel="apple-touch-icon" href="icon.png"/>
+       <!-- Place favicon.ico in the root directory -->
+
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+       <link rel="stylesheet" href="/css/normalize.css"/>
+       <link rel="stylesheet" href="/css/main.css"/>
+   </head>
+   <body>
+   <header><a href="/"><img class="logo" alt="iHeartMedia" src="/img/iheart-logo.png"/></a><a href="/"><h4>Home</h4></a><img class="full-logo" alt="iHeartMedia" src="/img/iheartfull-logo.jpeg"/></header>
+   	<div class="container index-body">
+       	<form action="#" th:action="@{/updatestation}" th:object="${station}" method="post">
+       	  <h1> Update a Station </h1>
+		  <div class="form-group">
+			<h3>Old Station</h3>
+		    <input type="stationId" name="stationId" class="form-control" id="station" aria-describedby="station" placeholder="Enter Station Id" th:field="*{stationId}"/>
+		    <small class="form-text text-muted">Example: 106.1</small><br/><br/>
+
+		    <input type="stationName" name="name" class="form-control" id="station" aria-describedby="station" placeholder="Enter Station Name" th:field="*{name}"/>
+		    <small class="form-text text-muted">Example: KISS</small><br/><br/>
+		    
+		    <h3>New Station</h3>
+		    <input type="stationId" name="newStationId" class="form-control" id="station" aria-describedby="station" placeholder="Enter Station Id" />
+		    <small class="form-text text-muted">Example: 106.1</small><br/><br/>
+
+		    <input type="stationName" name="newStationName" class="form-control" id="station" aria-describedby="station" placeholder="Enter Station Name"/>
+		    <small class="form-text text-muted">Example: KISS</small><br/><br/>
+
+		  </div>
+		  <button type="submit" class="btn btn-primary">Update Station</button><br/><br/>
+		</form>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+   </div>
+   </body>
+</html>
